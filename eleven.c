@@ -9,7 +9,7 @@
 //     return 0;
 // }
 
-//_______________________________________________________
+//_____________________________________________________
 
 /* Malloc() ---> memory allocation*/
 
@@ -30,7 +30,7 @@
 //     return 0;
 // }
 
-//_____________________________________________________________
+//____________________________________________
 
 /*Write a program to allocate memory to store 5 prices*/
 
@@ -56,13 +56,32 @@
 
 /*calloc() ---> continous allocation*/
 
+// int main(){
+//     float *ptr ;
+//     ptr = (float*) calloc(5 , sizeof(float));
+
+//     for(int i=0 ; i<5 ; i++){
+//         printf("%f \n" , ptr[i]);
+//     }
+
+//     return 0;
+// }
+
+//________________________________________
+
+/*WAP to allocate memory of size n , where n is enter by user*/
+
 int main(){
-    float *ptr ;
-    ptr = (float*) calloc(5 , sizeof(float));
+    int *ptr ;
+    int n;
+    printf("Enter n :");
+    scanf("%d" , &n);
 
-    for(int i=0 ; i<5 ; i++){
-        printf("%f \n" , ptr[i]);
+    ptr =(int *) calloc (n , sizeof(int ));
+
+    for(int i=0 ; i<n ; i++){
+        printf("%d \n" , ptr[i]);
     }
-
     return 0;
+    
 }
