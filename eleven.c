@@ -115,25 +115,46 @@
 
 /* Allocate memory for 5 numbers . then dynamically increase it to 8 numbers*/
 
+// int main(){
+//     int  *ptr ;
+//     ptr = (int *) calloc (5 , sizeof(int ));
+
+//     printf("Enter number (5) = ");
+//     for(int i = 0 ; i<5 ; i++){
+//         scanf("%d" , &ptr[i]);
+//     }
+
+//     ptr = realloc (ptr , 8);
+
+//     printf("Enter number (8) =  ");
+//     for(int i = 0 ; i<8 ; i++){
+//         scanf("%d \n" , &ptr[i]);
+//     }
+
+//     //print
+//     for(int i = 0 ; i<8 ; i++){
+//         printf("Number %d is %d \n  " ,i , ptr[i]);   
+//     }
+// }
+
+// ____________________________________________
+
+/*Create an Array of size 5 (using calloc) and enter its value from the user*/
+
 int main(){
-    int  *ptr ;
+    int *ptr;
     ptr = (int *) calloc (5 , sizeof(int ));
 
-    printf("Enter number (5) = ");
-    for(int i = 0 ; i<5 ; i++){
+    printf("Enter Number (5) = ");
+    for(int i=0 ; i<5 ; i++){
         scanf("%d" , &ptr[i]);
     }
 
-    ptr = realloc (ptr , 8);
-
-    printf("Enter number (8) =  ");
-    for(int i = 0 ; i<8 ; i++){
-        scanf("%d \n" , &ptr[i]);
-    }
-
     //print
-    for(int i = 0 ; i<8 ; i++){
-        printf("Number %d is %d \n  " ,i , ptr[i]);   
+
+    for(int i=0 ; i<5 ; i++){
+        printf("Number %d is %d \n" , i , ptr[i]);
     }
 
+    return 0;
 }
