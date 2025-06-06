@@ -86,25 +86,54 @@
 
 // }
 
+//________________________________________
+
 /*Free()*/
 
+// int main(){
+//     int *ptr ;
+//     int n;
+//     printf("Enter n :");
+//     scanf("%d" , &n);
+
+//     ptr =(int *) calloc (n , sizeof(int ));
+//     for(int i=0 ; i<n ; i++){
+//         printf("%d \n" , ptr[i]);
+//     }
+
+//     free(ptr);
+
+//     ptr =(int *) calloc (2 , sizeof(int ));
+//     for(int i=0 ; i<2 ; i++){
+//         printf("%d \n" , ptr[i]);
+//     }
+
+//     return 0;
+// }
+
+// _____________________________________________
+
+/* Allocate memory for 5 numbers . then dynamically increase it to 8 numbers*/
+
 int main(){
-    int *ptr ;
-    int n;
-    printf("Enter n :");
-    scanf("%d" , &n);
+    int  *ptr ;
+    ptr = (int *) calloc (5 , sizeof(int ));
 
-    ptr =(int *) calloc (n , sizeof(int ));
-    for(int i=0 ; i<n ; i++){
-        printf("%d \n" , ptr[i]);
+    printf("Enter number (5) = ");
+    for(int i = 0 ; i<5 ; i++){
+        scanf("%d" , &ptr[i]);
     }
 
-    free(ptr);
+    ptr = realloc (ptr , 8);
 
-    ptr =(int *) calloc (2 , sizeof(int ));
-    for(int i=0 ; i<2 ; i++){
-        printf("%d \n" , ptr[i]);
+    printf("Enter number (8) =  ");
+    for(int i = 0 ; i<8 ; i++){
+        scanf("%d \n" , &ptr[i]);
     }
-    
-    return 0;
+
+    //print
+    for(int i = 0 ; i<8 ; i++){
+        printf("Number %d is %d \n  " ,i , ptr[i]);   
+    }
+
 }
