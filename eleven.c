@@ -71,6 +71,23 @@
 
 /*WAP to allocate memory of size n , where n is enter by user*/
 
+// int main(){
+//     int *ptr ;
+//     int n;
+//     printf("Enter n :");
+//     scanf("%d" , &n);
+
+//     ptr =(int *) calloc (n , sizeof(int ));
+
+//     for(int i=0 ; i<n ; i++){
+//         printf("%d \n" , ptr[i]);
+//     }
+//     return 0;
+
+// }
+
+/*Free()*/
+
 int main(){
     int *ptr ;
     int n;
@@ -78,10 +95,16 @@ int main(){
     scanf("%d" , &n);
 
     ptr =(int *) calloc (n , sizeof(int ));
-
     for(int i=0 ; i<n ; i++){
         printf("%d \n" , ptr[i]);
     }
-    return 0;
+
+    free(ptr);
+
+    ptr =(int *) calloc (2 , sizeof(int ));
+    for(int i=0 ; i<2 ; i++){
+        printf("%d \n" , ptr[i]);
+    }
     
+    return 0;
 }
